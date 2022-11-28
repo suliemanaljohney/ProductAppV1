@@ -1,0 +1,34 @@
+﻿@page "/category"
+
+<PageTitle>category info</PageTitle>
+
+<h1>category</h1>
+
+@*@inject ICategoryService categoryservice
+<h3>Category</h3>
+<table>
+    <thead>
+        <tr>
+           <th> CategoryName</th>
+        </tr>
+     
+    </thead>
+    <tbody>
+       
+        @foreach(var category in categoryservice.CategoriesInfos)
+        {
+            <td>
+                @category.Name
+            </td>
+        }
+    </tbody>
+</table>
+*@
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        //await categoryservice.GetAllCategories();
+
+    }
+
+}
